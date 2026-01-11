@@ -1,0 +1,230 @@
+/* ----------------------
+    Root Colors
+---------------------- */
+
+:root {
+    /* position: fixed; */
+    margin: 0;
+    padding: 0;
+    --lime-green: #D7E8BC;
+    --hunter-green: #355F3B;
+    --burnt-orange: #CA5601;
+    --sea-mist: #DFE8E6;
+}
+
+/* ----------------------
+    lobal Styles
+---------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--sea-mist);
+    color: #1f2d2b;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+
+}
+
+/* ----------------------
+    Navbar
+---------------------- */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--hunter-green);
+    padding: 8px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    display: none;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 8px 40px;
+    gap: 32px;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    background-color: var(--hunter-green);
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.navbar li a {
+    display: block;
+    color: white;
+    padding: 16px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    background-color: var(--burnt-orange);
+    color: white;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--hunter-green);
+        width: 100%;
+        display: none;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .navbar li a {
+        padding: 16px;
+        text-align: center;
+    }
+}
+
+/* Main section */
+
+h2,
+h3,
+h4 {
+    color: var(--hunter-green);
+}
+
+h1 {
+    color: var(--hunter-green);
+    font-weight: 700;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+#home {
+    text-align: center;
+    background-color: var(--lime-green);
+}
+
+#about,
+#project,
+#feedback {
+    padding-top: 100px;
+    /* gives space below navbar */
+}
+
+
+.lead {
+    max-width: 600px;
+    margin: 0 auto 16px;
+}
+
+
+/* Cards */
+.card {
+    border: none;
+    background-color: var(--lime-green);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    color: var(--hunter-green);
+    font-weight: 600;
+}
+
+/* Button */
+
+.btn-primary {
+    background-color: var(--burnt-orange);
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #a94700;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid var(--lime-green);
+}
+
+/* footer */
+.footer {
+    background-color: var(--hunter-green);
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--burnt-orange);
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    font-size: 14px;
+
+}
+
+.feedback-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.fade-in {
+    animation: fadeSlide 0.4s ease-in-out;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
