@@ -59,8 +59,7 @@ body {
 .navbar {
     list-style-type: none;
     margin: 0;
-    padding: 8px 40px;
-    gap: 32px;
+    gap: 30px;
     display: flex;
     justify-content: flex-end;
     position: sticky;
@@ -75,7 +74,7 @@ body {
 .navbar li a {
     display: block;
     color: white;
-    padding: 16px 20px;
+    padding: 8px 20px;
     text-decoration: none;
     font-weight: 500;
     transition: background-color 0.3s ease;
@@ -95,7 +94,7 @@ body {
 
     .navbar {
         position: absolute;
-        top: 60px;
+        top: 40px;
         right: 0;
         flex-direction: column;
         background-color: var(--hunter-green);
